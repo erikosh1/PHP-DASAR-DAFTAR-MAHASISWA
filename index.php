@@ -2,11 +2,14 @@
 // koneksi ke database
 require 'functions.php';
 $karyawan = query("SELECT * FROM karyawan");
+
+
+// tombol cari di klik
+if(isset($_POST["cari"]) ){
+    $karyawan = cari($_POST["keyword"]);
+}
+
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,9 +26,15 @@ $karyawan = query("SELECT * FROM karyawan");
 <p style="color:red; position:absolute; top:0; right:0; "><?= date("l d M Y")?></p>
 <a href="tambah.php">Tambah data karyawan</a>
 
+
+<form action="" method="post">
+    <input type="text" name="keyword" size="30" autofocus placeholder="masukan keyword pencarian" autocomplete="off">
+    <button type="input" name="cari">Cari!</button>
+</form>
+
+
+
 <table border="1" cellpadding="10" cellspacing="0">
-
-
 <tr>
     <th>No</th>
     <th>Aksi</th>

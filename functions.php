@@ -59,4 +59,18 @@ function ubah($data){
         return mysqli_affected_rows($conn);
 }
 
+function cari($keyword){
+    $query = "SELECT * FROM karyawan 
+                WHERE
+            nama LIKE '%$keyword%' OR
+            umur LIKE '%$keyword%' OR
+            alamat LIKE '%$keyword%' OR
+            gaji LIKE '%$keyword%'
+                    ";
+    return query($query);
+}
+
+
+
+
 ?>
