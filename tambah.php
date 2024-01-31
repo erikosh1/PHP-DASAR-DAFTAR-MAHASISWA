@@ -36,19 +36,19 @@ if (isset($_POST["submit"]) ) {
     <ul>
         <li>
             <label for="nama">nama</label>
-            <input type="text" id="nama" name="nama"required>
+            <input type="text" id="nama" name="nama"required autocomplete="off">
         </li>
         <li>
             <label for="umur">umur</label>
-            <input type="text" id="umur" name="umur" required>
+            <input type="text" id="umur" name="umur" required autocomplete="off">
         </li>
         <li>
             <label for="alamat">alamat</label>
-            <input type="text" id="alamat" name="alamat" required>
+            <input type="text" id="alamat" name="alamat" required autocomplete="off">
         </li>
         <li>
             <label for="gaji">gaji</label>
-            <input type="text" id="gaji" name="gaji" required>
+            <input type="text" id="gaji" name="gaji" required autocomplete="off">
         </li>
         <li>
             <button type="submit" name="submit">Tambah Data!</button>

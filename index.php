@@ -33,7 +33,6 @@ if(isset($_POST["cari"]) ){
 </form>
 
 
-
 <table border="1" cellpadding="10" cellspacing="0">
 <tr>
     <th>No</th>
