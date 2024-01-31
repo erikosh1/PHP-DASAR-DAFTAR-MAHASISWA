@@ -18,13 +18,24 @@ if(isset($_POST["cari"]) ){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Admin</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .pop-up a {
+            display:block;
+            margin-top:5px;
+        }
+
+    </style>
 </head>
 <body>
     
 
 <h1>Daftar Karyawan</h1>
 <p style="color:red; position:absolute; top:0; right:0; "><?= date("l d M Y")?></p>
-<a href="tambah.php">Tambah data karyawan</a>
+<div class="pop-up">
+    <a href="tambah.php">Tambah data karyawan</a>
+    <a href="login.php">Login</a>
+    <a href="registrasi.php">registrasi</a>
+</div>
 
 
 <form action="" method="post">

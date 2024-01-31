@@ -53,7 +53,7 @@ if(isset($_POST["register"])) {
         <ul>
             <li>
                 <label for="username">username :</label>
-                <input type="text" name="username" id="username">
+                <input type="text" name="username" id="username" required autocomplete="off">
             </li>
             <li>
                 <label for="password">Password</label>
