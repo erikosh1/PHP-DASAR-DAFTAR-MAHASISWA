@@ -1,4 +1,14 @@
 <?php 
+    session_start();
+
+    if(!isset($_SESSION["login"])) {
+        header("Location: login.php");
+        exit;
+    }
+
+
+
+
 // koneksi ke database
 require 'functions.php';
 $karyawan = query("SELECT * FROM karyawan");
@@ -30,6 +40,7 @@ if(isset($_POST["cari"]) ){
     
 
 <h1>Daftar Karyawan</h1>
+<a href="logout.php">Logout</a>
 <p style="color:red; position:absolute; top:0; right:0; "><?= date("l d M Y")?></p>
 <div class="pop-up">
     <a href="tambah.php">Tambah data karyawan</a>
